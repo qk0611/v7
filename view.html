@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Платформа Тендеров - Просмотр Тендеров</title>
+    <link rel="stylesheet" href="stil.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">
+            <a href="#">
+                <img src="img/IMG_9922-removebg-preview.png" alt="Логотип">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="view.html">Просмотр Тендеров</a></li>
+        </ul>
+        <button class="btn">Связаться с нами</button>
+    </nav>
+
+    <!-- Поисковая строка -->
+    <div class="search-bar container">
+        <input type="text" id="search-input" placeholder="Поиск тендеров...">
+        <button class="btn" id="search-btn">Поиск</button>
+    </div>
+
+    <!-- Горизонтальный список категорий -->
+    <div class="container">
+        <h3>Все категории</h3>
+        <ul class="horizontal-categories">
+            <li><a href="#">Мужские</a></li>
+            <li><a href="#">Женские</a></li>
+            <li><a href="#">Батальные размеры</a></li>
+            <li><a href="#">Детская</a></li>
+            <li><a href="#">Спец одежда</a></li>
+            <li><a href="#">Ткань, фурнитура</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Прочие</a></li>
+        </ul>
+    </div>
+
+    <section id="suppliers" class="container">
+        <h2 class="header">Поставщики</h2>
+        <ul id="suppliers-list">
+            <!-- Информация о поставщиках будет добавляться здесь с помощью JavaScript -->
+        </ul>
+        
+        <h2 class="header">Доступные Тендеры</h2>
+        <ul id="tenders-list">
+            <!-- Тендеры будут добавляться здесь с помощью JavaScript -->
+        </ul>
+    </section>
+    
+    <script src="view.js"></script>
+</body>
+</html>

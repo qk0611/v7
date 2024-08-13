@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Платформа Тендеров - Форма</title>
+    <link rel="stylesheet" href="stil.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">
+            <a href="#">
+                <img src="img/IMG_9922-removebg-preview.png" alt="Логотип">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li class="link"><a href="index.html" class="buk">Главная</a></li>
+            <li class="link"><a href="view.html" class="buk">Просмотр Тендеров</a></li>
+        </ul>
+        <button class="btn">Связаться с нами</button>
+    </nav>
+
+    <header id="find-tenders" class="container">
+        <div class="content">
+            <h4>Добро пожаловать на нашу платформу тендеров</h4>
+            <h1>Найдите и разместите <span>Тендеры</span></h1>
+            <p>Откройте для себя разнообразные тендеры и разместите свои проекты для торгов. Присоединяйтесь к нашей платформе, чтобы найти потенциальных клиентов и поставщиков услуг.</p>
+            <a href="#new-tender" class="btn">Начать</a>
+        </div>
+        <div class="imaig">
+            <img src="img/q2.png" alt="Изображение">
+        </div>
+    </header>
+
+    <section class="container" id="new-tender">
+        <h2 class="header">Разместить Новый Тендер</h2>
+        <form id="tender-form">
+            <label for="quantity">Количество:</label>
+            <input type="number" id="quantity" name="quantity" required>
+    
+            <label for="product">Товар:</label>
+            <input type="text" id="product" name="product" required>
+    
+            <label for="priceDuration">Цена:</label>
+            <input type="text" id="priceDuration" name="priceDuration" required>
+    
+            <label for="currency">Валюта:</label>
+            <select id="currency" name="currency" required>
+                <option value="USD">USD</option>
+                <option value="KGS">KGS</option>
+                <option value="RUB">RUB</option>
+            </select>
+    
+            <label for="description">Описание:</label>
+            <textarea id="description" name="description" required></textarea>
+    
+            <label for="endDate">Срок:</label>
+            <input type="date" id="endDate" name="endDate" required>
+    
+            <label for="media">Фото или Видео Тендера:</label>
+            <input type="file" id="media" name="media" accept="image/*,video/*" required>
+    
+            <button type="submit" class="btn">Разместить тендер</button>
+        </form>
+    </section>
+
+    <section class="container" id="new-client">
+        <h2 class="header">Опубликовать Тендер для Клиента</h2>
+        <form id="client-form">
+            <label for="client-product">Товар:</label>
+            <input type="text" id="client-product" name="client-product" required>
+    
+            <label for="client-price">Цена:</label>
+            <input type="text" id="client-price" name="client-price" required>
+    
+            <label for="client-currency">Валюта:</label>
+            <select id="client-currency" name="client-currency" required>
+                <option value="USD">USD</option>
+                <option value="KGS">KGS</option>
+                <option value="RUB">RUB</option>
+            </select>
+    
+            <label for="client-endDate">Срок:</label>
+            <input type="date" id="client-endDate" name="client-endDate" required>
+    
+            <label for="client-description">Описание:</label>
+            <textarea id="client-description" name="client-description" required></textarea>
+    
+            <button type="submit" class="btn">Опубликовать</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

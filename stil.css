@@ -1,0 +1,792 @@
+/* Общие стили */
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+/* Навигация */
+nav {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.3s ease;
+}
+
+nav:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-logo img {
+    max-width: 130px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.nav-links a:hover {
+    color: #d81d1d;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #d81d1d;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #b30000;
+    transform: translateY(-3px);
+}
+
+/* Контейнер */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+}
+
+/* Хедер */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+    transition: background-color 0.3s ease;
+}
+
+header:hover {
+    background-color: #f9f9f9;
+}
+
+header .content {
+    max-width: 600px;
+    flex: 1 1 50%;
+}
+
+header .content h4 {
+    color: #666;
+    font-size: 1.25rem;
+}
+
+header .content h1 {
+    color: #333;
+    margin: 1rem 0;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    transition: color 0.3s ease;
+}
+
+header .content h1 span {
+    color: #d81d1d;
+}
+
+header .content p {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+header .imaig {
+    max-width: 500px;
+    flex: 1 1 50%;
+}
+
+/* Заголовки */
+.header {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.75rem;
+    color: #333;
+}
+
+/* Формы */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form label {
+    font-weight: 600;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+form input, form select, form textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    width: 100%;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+    border-color: #d81d1d;
+    background-color: #f9f9f9;
+}
+
+form button {
+    align-self: flex-start;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #d81d1d;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #b30000;
+    transform: translateY(-3px);
+}
+
+/* Список тендеров и поставщиков */
+ul#tenders-list, ul#suppliers-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+ul#tenders-list li, ul#suppliers-list li {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ul#tenders-list li:hover, ul#suppliers-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+ul#tenders-list li .tender-content, ul#suppliers-list li .supplier-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+ul#tenders-list li h4, ul#suppliers-list li h3 {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 600;
+}
+
+ul#tenders-list li p, ul#suppliers-list li p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+ul#tenders-list li .tender-icon, ul#suppliers-list li .supplier-icon {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul#tenders-list li .tender-icon img, ul#suppliers-list li .supplier-icon img {
+    max-width: 30px;
+    height: auto;
+}
+
+/* Форма ставок */
+.bid-form {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-start;
+}
+
+.bid-form input[type="text"] {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    flex-grow: 1;
+}
+
+.bid-form input[type="text"]:focus {
+    border-color: #d81d1d;
+}
+
+.bid-form button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #d81d1d;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.bid-form button:hover {
+    background-color: #b30000;
+    transform: translateY(-3px);
+}
+
+/* Горизонтальный список категорий */
+.tender-categories-horizontal {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+}
+
+.horizontal-categories {
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    white-space: nowrap;
+}
+
+.horizontal-categories li {
+    display: inline-block;
+}
+
+.horizontal-categories li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    background-color: #f4f4f4;
+    color: #333;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.horizontal-categories li a:hover {
+    background-color: #d81d1d;
+    color: #fff;
+}
+
+/* Поисковая строка */
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-right: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #d81d1d;
+}
+
+.search-bar button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #d81d1d;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #b30000;
+    transform: translateY(-3px);
+}
+
+/* Плавная прокрутка */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 1024px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    header .content {
+        max-width: 100%;
+    }
+
+    header .imaig {
+        max-width: 100%;
+        margin-top: 2rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .tender-categories {
+        margin: 1rem auto;
+    }
+
+    ul#tenders-list li, ul#suppliers-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul#tenders-list li .tender-content, ul#suppliers-list li .supplier-content {
+        gap: 0.75rem;
+    }
+
+    ul#tenders-list li .tender-icon, ul#suppliers-list li .supplier-icon {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 0.5rem;
+    }
+
+    .nav-links {
+        gap: 0.5rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    form {
+        padding: 1rem;
+    }
+
+    form input, form textarea {
+        padding: 0.5rem;
+        font-size: 0.875rem;
+    }
+
+    ul#tenders-list li, ul#suppliers-list li {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    ul#tenders-list li h4, ul#suppliers-list li h3 {
+        font-size: 1.25rem;
+    }
+
+    ul#tenders-list li p, ul#suppliers-list li p {
+        font-size: 0.875rem;
+    }
+
+    ul#tenders-list li .tender-icon img, ul#suppliers-list li .supplier-icon img {
+        max-width: 25px;
+    }
+
+    .bid-form input[type="text"] {
+        font-size: 0.875rem;
+        padding: 0.5rem;
+    }
+
+    .bid-form button {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+}
+/* Стили для изображений */
+.tender-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tender-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tender-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.tender-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+/* Стиль для секции категорий */
+.categories-section {
+    text-align: center;
+    padding: 1.5rem 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень под секцией */
+    margin-bottom: 2rem;
+}
+
+/* Горизонтальный список категорий */
+.horizontal-categories {
+    display: flex;
+    justify-content: center; /* Центрирование элементов списка */
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    list-style: none;
+    margin: 0;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+}
+
+.horizontal-categories li {
+    display: inline-block;
+    scroll-snap-align: start;
+}
+
+.category-btn {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    background-color: #f4f4f4;
+    color: #333;
+    border-radius: 25px;
+    font-size: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    white-space: nowrap;
+}
+
+.category-btn:hover {
+    background-color: #d81d1d;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.category-btn.active {
+    background-color: #d81d1d;
+    color: #fff;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .horizontal-categories {
+        gap: 0.5rem;
+    }
+
+    .category-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+}
+/* Стиль для секции категорий */
+.categories-section {
+    text-align: center;
+    padding: 1.5rem 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень под секцией */
+    margin-bottom: 2rem;
+}
+
+/* Горизонтальный список категорий */
+.horizontal-categories {
+    display: flex;
+    justify-content: center; /* Центрирование элементов списка */
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    list-style: none;
+    margin: 0;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+}
+
+.horizontal-categories li {
+    display: inline-block;
+    scroll-snap-align: start;
+}
+
+.category-btn {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    background-color: #f4f4f4;
+    color: #333;
+    border-radius: 25px;
+    font-size: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    white-space: nowrap;
+}
+
+.category-btn:hover {
+    background-color: #d81d1d;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.category-btn.active {
+    background-color: #d81d1d;
+    color: #fff;
+}
+
+/* Адаптивные стили для планшетов */
+@media (max-width: 768px) {
+    .horizontal-categories {
+        justify-content: flex-start; /* Выровнять категории по началу */
+        gap: 0.75rem; /* Уменьшить расстояние между элементами */
+        padding: 1rem 0.5rem;
+    }
+
+    .category-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem; /* Уменьшить размер текста */
+    }
+}
+
+/* Адаптивные стили для телефонов */
+@media (max-width: 480px) {
+    .horizontal-categories {
+        justify-content: flex-start; /* Выровнять категории по началу */
+        gap: 0.5rem; /* Ещё больше уменьшить расстояние между элементами */
+        padding: 1rem 0.5rem;
+        
+    }
+
+    .category-btn {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem; /* Ещё больше уменьшить размер текста */
+    }
+}
+/* Основные стили для навигации */
+.navbar {
+    display: flex;
+    flex-direction: column; /* Располагаем элементы по вертикали */
+    justify-content: center; /* Центрируем элементы по вертикали */
+    align-items: center; /* Центрируем элементы по горизонтали */
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Центрируем текст */
+}
+
+.nav-logo img {
+    max-width: 130px;
+    margin-bottom: 1rem; /* Добавляем отступ под логотипом */
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column; /* Размещаем ссылки по вертикали */
+    list-style: none;
+    gap: 1rem;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #d81d1d;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #d81d1d;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 1rem; /* Добавляем отступ сверху для кнопки */
+}
+
+.btn:hover {
+    background-color: #b30000;
+    transform: translateY(-3px);
+}
+
+/* Адаптивные стили */
+@media (min-width: 769px) {
+    .navbar {
+        flex-direction: row; /* На больших экранах возвращаем элементы в строку */
+        justify-content: space-between; /* Разделяем логотип и элементы */
+        
+    }
+
+    .nav-links {
+        flex-direction: row;
+        gap: 1.5rem;
+       
+        
+    }
+}
+/* Основные стили для навигации */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.nav-logo img {
+    max-width: 130px;
+    margin-bottom: 1rem;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 1rem;
+    padding: 0;
+    text-align: center; /* Центрируем текст */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #d81d1d;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #d81d1d;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background-color: #b30000;
+    transform: translateY(-3px);
+}
+
+/* Адаптивные стили */
+@media (min-width: 769px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    .btn {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        text-align: center;
+    }
+
+    .nav-logo,
+    .nav-links,
+    .btn {
+        margin: 0 auto;
+    }
+}
